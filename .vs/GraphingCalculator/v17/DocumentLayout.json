@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E99438A1-2BAB-4D33-94F0-ABBA2062BDD1}|GraphingCalculator.csproj|c:\\users\\lando\\source\\repos\\graphingcalculator\\graphingcalculator.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E99438A1-2BAB-4D33-94F0-ABBA2062BDD1}|GraphingCalculator.csproj|solutionrelative:graphingcalculator.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99438A1-2BAB-4D33-94F0-ABBA2062BDD1}|GraphingCalculator.csproj|c:\\users\\lando\\source\\repos\\graphingcalculator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E99438A1-2BAB-4D33-94F0-ABBA2062BDD1}|GraphingCalculator.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E99438A1-2BAB-4D33-94F0-ABBA2062BDD1}|GraphingCalculator.csproj|c:\\users\\lando\\source\\repos\\graphingcalculator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E99438A1-2BAB-4D33-94F0-ABBA2062BDD1}|GraphingCalculator.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GraphingCalculator",
+              "DocumentMoniker": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator.csproj",
+              "RelativeDocumentMoniker": "GraphingCalculator.csproj",
+              "ToolTip": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator.csproj",
+              "RelativeToolTip": "GraphingCalculator.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-27T21:20:15.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-26T01:50:57.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAAAC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-26T09:04:24.506Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

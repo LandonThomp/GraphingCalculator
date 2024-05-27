@@ -1,0 +1,543 @@
+﻿<Window
+    x:Class="GraphingCalculator.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:GraphingCalculator"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="GraphingCalculator"
+    Width="1280"
+    Height="720"
+    MinWidth="960"
+    MinHeight="540"
+    mc:Ignorable="d">
+
+    <!--  The starting height and width will be 720 x 1280  -->
+    <Grid Background="#F0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+        <!--  Next four grids are for top button pages  -->
+        <!--  Equation Editor Page Content  -->
+        <Grid
+            x:Name="EquationEditor"
+            Grid.Row="1"
+            Grid.Column="1">
+            <!--  We want to make bubbles for our three equations  -->
+            <Border
+                BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="20">
+                <!--  We now want three columns for our equations  -->
+                <Grid Background="Transparent">
+                    <Grid.RowDefinitions>
+                        <!--  EQ 1  -->
+                        <RowDefinition />
+                        <RowDefinition />
+                        <!--  EQ 2  -->
+                        <RowDefinition />
+                        <RowDefinition />
+                        <!--  EQ 3  -->
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <!--  We want a user TextBox and TextBlock for all 3 equations  -->
+                    <!--  EQ 1  -->
+                    <Border
+                        Margin="10,5,10,5"
+                        Background="#30B646"
+                        CornerRadius="10">
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="30"
+                            Foreground="White"
+                            Text="Equation 1"
+                            TextAlignment="Center" />
+                    </Border>
+                    <TextBox
+                        Grid.Row="1"
+                        Margin="10,0,10,10"
+                        HorizontalContentAlignment="Right"
+                        VerticalContentAlignment="Center"
+                        Background="LightGray"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        FontFamily="Arial Rounded MT"
+                        FontSize="28"
+                        Foreground="Black" />
+                    <!--  EQ 2  -->
+                    <Border
+                        Grid.Row="2"
+                        Margin="10,5,10,5"
+                        Background="#30B646"
+                        CornerRadius="10">
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="30"
+                            Foreground="White"
+                            Text="Equation 2"
+                            TextAlignment="Center" />
+                    </Border>
+                    <TextBox
+                        Grid.Row="3"
+                        Margin="10,0,10,10"
+                        HorizontalContentAlignment="Right"
+                        VerticalContentAlignment="Center"
+                        Background="LightGray"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        FontFamily="Arial Rounded MT"
+                        FontSize="28"
+                        Foreground="Black" />
+                    <!--  EQ 3  -->
+                    <Border
+                        Grid.Row="4"
+                        Margin="10,5,10,5"
+                        Background="#30B646"
+                        CornerRadius="10">
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="30"
+                            Foreground="White"
+                            Text="Equation 3"
+                            TextAlignment="Center" />
+                    </Border>
+                    <TextBox
+                        Grid.Row="5"
+                        Margin="10,0,10,10"
+                        HorizontalContentAlignment="Right"
+                        VerticalContentAlignment="Center"
+                        Background="LightGray"
+                        BorderBrush="Black"
+                        BorderThickness="2"
+                        FontFamily="Arial Rounded MT"
+                        FontSize="28"
+                        Foreground="Black" />
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--  Graph Settings Content  -->
+        <Grid
+            x:Name="GraphSettings"
+            Grid.Row="1"
+            Grid.Column="1">
+            <Image RenderTransformOrigin="0.5,0.5" Source="/TempImages/Graph_Settings.png">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="2" />
+                        <SkewTransform />
+                        <RotateTransform />
+                        <TranslateTransform />
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+
+        <!--  Graph View Content  -->
+        <Grid
+            x:Name="GraphView"
+            Grid.Row="1"
+            Grid.Column="1">
+            <TextBlock>Testing Graph View.</TextBlock>
+        </Grid>
+
+        <!--  System Settings Content  -->
+        <Grid
+            x:Name="SystemSettings"
+            Grid.Row="1"
+            Grid.Column="1">
+            <TextBlock>Testing System Settings.</TextBlock>
+        </Grid>
+
+        <!--  This is for the top navigation buttons  -->
+        <UniformGrid Grid.Column="1" Rows="1">
+            <!--  Four navigation buttons  -->
+            <Button
+                x:Name="eqEditorButton"
+                Click="eqEditorButton_Click"
+                Content="Equation Editor"
+                FontFamily="Arial Rounded MT"
+                FontSize="25"
+                FontWeight="Medium"
+                MouseEnter="eqEditorButton_MouseEnter"
+                MouseLeave="eqEditorButton_MouseLeave">
+                <!--  Changing the button colors, round corners, mouse over color  -->
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#C9CDED" />
+                        <Setter Property="Cursor" Value="Hand" />
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            MaxHeight="50"
+                            Margin="5,5,5,5"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="10">
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button
+                x:Name="graphViewButton"
+                Click="graphViewButton_Click"
+                Content="Graph View"
+                FontFamily="Arial Rounded MT"
+                FontSize="25"
+                FontWeight="Medium"
+                MouseEnter="graphViewButton_MouseEnter"
+                MouseLeave="graphViewButton_MouseLeave">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#C9CDED" />
+                        <Setter Property="Cursor" Value="Hand" />
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            MaxHeight="50"
+                            Margin="5,5,5,5"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="10">
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button
+                x:Name="grapSettingsButton"
+                Click="graphSettingsButton_Click"
+                Content="Graph Settings"
+                FontFamily="Arial Rounded MT"
+                FontSize="25"
+                FontWeight="Medium"
+                MouseEnter="graphSettingsButton_MouseEnter"
+                MouseLeave="graphSettingsButton_MouseLeave">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#C9CDED" />
+                        <Setter Property="Cursor" Value="Hand" />
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            MaxHeight="50"
+                            Margin="5,5,5,5"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="10">
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button
+                x:Name="systemSettingsButton"
+                Click="systemSettingsButton_Click"
+                Content="System Settings"
+                FontFamily="Arial Rounded MT"
+                FontSize="25"
+                FontWeight="Medium"
+                MouseEnter="systemSettingsButton_MouseEnter"
+                MouseLeave="systemSettingsButton_MouseLeave">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#C9CDED" />
+                        <Setter Property="Cursor" Value="Hand" />
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            MaxHeight="50"
+                            Margin="5,5,5,5"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="10">
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </UniformGrid>
+
+
+
+        <!--  This is for the equation response  -->
+        <Grid
+            x:Name="MainContent"
+            Grid.Row="1"
+            Grid.Column="1"
+            Background="Transparent">
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                Background="White"
+                BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="20">
+
+                <Grid
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Background="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <!--  User text  -->
+                    <Border
+                        x:Name="textBorder3"
+                        Grid.Row="0"
+                        Grid.Column="2">
+                        <TextBlock
+                            x:Name="userTextBlock3"
+                            MinHeight="45.84"
+                            Margin="5,5,5,5"
+                            Padding="10"
+                            VerticalAlignment="Center"
+                            Background="LightGray"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="Black"
+                            TextAlignment="Right" />
+                    </Border>
+                    <Border
+                        x:Name="textBorder2"
+                        Grid.Row="2"
+                        Grid.Column="2">
+                        <TextBlock
+                            x:Name="userTextBlock2"
+                            MinHeight="45.84"
+                            Margin="5"
+                            Padding="10"
+                            VerticalAlignment="Center"
+                            Background="LightGray"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="Black"
+                            TextAlignment="Right" />
+                    </Border>
+                    <Border
+                        x:Name="textBorder1"
+                        Grid.Row="4"
+                        Grid.Column="2">
+                        <TextBlock
+                            x:Name="userTextBlock1"
+                            MinHeight="45.84"
+                            Margin="5"
+                            Padding="10"
+                            VerticalAlignment="Center"
+                            Background="LightGray"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="Black"
+                            TextAlignment="Right" />
+                    </Border>
+                    <!--  Response Text  -->
+                    <Border Grid.Row="1" CornerRadius="5">
+                        <TextBlock
+                            MinHeight="45.84"
+                            Margin="5"
+                            Padding="10"
+                            VerticalAlignment="Center"
+                            Background="LightGray"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="Black"
+                            Text="1024"
+                            TextAlignment="Left" />
+                    </Border>
+                    <Border Grid.Row="3">
+                        <TextBlock
+                            MinHeight="45.84"
+                            Margin="5"
+                            Padding="10"
+                            VerticalAlignment="Center"
+                            Background="LightGray"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="Black"
+                            Text="sin(π/4)"
+                            TextAlignment="Left" />
+                    </Border>
+                    <Border Grid.Row="5">
+                        <TextBlock
+                            MinHeight="45.84"
+                            Margin="5"
+                            Padding="10"
+                            VerticalAlignment="Center"
+                            Background="LightGray"
+                            FontFamily="Arial Rounded MT"
+                            FontSize="20"
+                            FontWeight="Bold"
+                            Foreground="Black"
+                            Text="1024"
+                            TextAlignment="Left" />
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+        <!--  This is for the Equation Enter button + symbols  -->
+        <UniformGrid
+            Grid.Row="2"
+            Grid.Column="1"
+            Rows="1">
+            <Button
+                Margin="11,5,177,5"
+                Content="Symbols"
+                FontFamily="Arial Rounded MT"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="White">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#70B493" />
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#30B646" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Margin="5,0,5,0"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="8">
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            <Border
+                Margin="-172,5,-172,5"
+                BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="10">
+                <TextBox
+                    x:Name="userInput"
+                    Margin="8,0"
+                    HorizontalContentAlignment="Right"
+                    VerticalContentAlignment="Center"
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    FontFamily="Arial Rounded MT"
+                    FontSize="20"
+                    FontWeight="Medium">
+                    <!--  This hides the blue highlight box!  -->
+                    <TextBox.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="TextBox">
+                                        <Border
+                                            Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            CornerRadius="5">
+                                            <ScrollViewer x:Name="PART_ContentHost" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </TextBox.Resources>
+
+                </TextBox>
+            </Border>
+            <Button
+                x:Name="enterButton"
+                Margin="177,5,11,5"
+                Click="enterButton_Click"
+                Content="Enter"
+                FontFamily="Arial Rounded MT"
+                FontSize="20"
+                FontWeight="Bold"
+                Foreground="White">
+
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="#70B493" />
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#30B646" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Margin="5,0,5,0"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="8">
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+        </UniformGrid>
+        <!--  This is the seperator for the top buttons  -->
+        <Rectangle
+            Grid.ColumnSpan="3"
+            Height="4"
+            Margin="0,64,0,0"
+            VerticalAlignment="Center"
+            Fill="#6FA0FF" />
+    </Grid>
+</Window>
