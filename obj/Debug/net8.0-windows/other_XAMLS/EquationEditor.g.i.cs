@@ -61,7 +61,7 @@ namespace GraphingCalculator.other_XAMLS {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/GraphingCalculator;component/other_xamls/equationeditor.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/GraphingCalculator;V1.0.0.0;component/other_xamls/equationeditor.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\other_XAMLS\EquationEditor.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

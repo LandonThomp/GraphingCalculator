@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\lando\source\repos\GraphingCalculator\obj\Debug\net8.0-windows\
+C:\Users\lando\source\repos\GraphingCalculator\GraphingCalculator\obj\Debug\net8.0-windows\
 GraphingCalculator
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\lando\source\repos\GraphingCalculator\App.xaml
+C:\Users\lando\source\repos\GraphingCalculator\GraphingCalculator\App.xaml
 2-879249283
 2-1442225082
 5-541156384
 198-1509178875
 MainWindow.xaml;other_XAMLS\EquationEditor.xaml;
 
-False
+True
 

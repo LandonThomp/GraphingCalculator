@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator.csproj": {}
+    "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator\\GraphingCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator.csproj": {
+    "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator\\GraphingCalculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator\\GraphingCalculator.csproj",
         "projectName": "GraphingCalculator",
-        "projectPath": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator.csproj",
+        "projectPath": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator\\GraphingCalculator.csproj",
         "packagesPath": "C:\\Users\\lando\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\obj\\",
+        "outputPath": "C:\\Users\\lando\\source\\repos\\GraphingCalculator\\GraphingCalculator\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
