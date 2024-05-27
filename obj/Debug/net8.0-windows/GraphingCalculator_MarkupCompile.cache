@@ -5,15 +5,15 @@ winexe
 C#
 .cs
 C:\Users\lando\source\repos\GraphingCalculator\GraphingCalculator\obj\Debug\net8.0-windows\
-GraphingCalculator
+GraphingCalculator_cskspv0o_wpftmp
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 C:\Users\lando\source\repos\GraphingCalculator\GraphingCalculator\App.xaml
 2-879249283
 2-1442225082
-5-541156384
-198-1509178875
+9-523868126
+3961276609546
 MainWindow.xaml;other_XAMLS\EquationEditor.xaml;
 
 True
