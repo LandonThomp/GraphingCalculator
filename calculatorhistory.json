@@ -1,0 +1,5 @@
+[
+    "int(-5x+2)___-5*x^2/2 + 2*x",
+    "int(sin(-5x))___cos(5*x)/5",
+    "___Error: invalid expression"
+]
